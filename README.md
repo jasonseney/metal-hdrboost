@@ -16,6 +16,6 @@ Works on any XDR‑capable Mac display (14‑inch, 16‑inch, Studio Display, e
 ### 🖥  Quick install
 
 ```zsh
-curl -sL https://github.com/jasonseney/metal-hdrboost/raw/main/install.sh | zsh
+curl -sL https://github.com/jasonseney/metal-hdrboost/raw/main/install.sh | bash
 ```
 
