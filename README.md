@@ -15,8 +15,7 @@ Works on any XDR‑capable Mac display (14‑inch, 16‑inch, Studio Display, e
 
 ### 🖥  Quick install
 
-```bash
-curl -sL https://github.com/<you>/hdrboost/raw/main/install.sh | bash
-open shortcuts/Toggle\ XDR\ Boost.shortcut   # import the hot‑key
+```zsh
+curl -sL https://github.com/jasonseney/metal-hdrboost/raw/main/install.sh | zsh
 ```
 
