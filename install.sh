@@ -1,10 +1,16 @@
 #!/usr/bin/env bash
-set -e
+set -euo pipefail
 
-DEST="/usr/local/bin"            # use /opt/homebrew/bin on Apple Silicon if you prefer
-echo "Installing hdrboost to $DEST (sudo may prompt)…"
-curl -sL https://github.com/jasonseney/metal-hdrboost/releases/latest/download/hdrboost.zip |
-  tar -xz -C "$DEST"
-chmod +x "$DEST/hdrboost"
+# Where to put it
+BIN_DIR="${BIN_DIR:-/usr/local/bin}"
+[[ $(uname -m) == "arm64" && ! -d /usr/local ]] && BIN_DIR="/opt/homebrew/bin"
 
-echo "✅  Installed. Run 'hdrboost &' or import the Shortcut to toggle."
+sudo mkdir -p "$BIN_DIR"
+
+echo "→ Downloading hdrboost to $BIN_DIR"
+
+curl -sL --fail -o "$BIN_DIR/hdrboost" \
+     https://github.com/jasonseney/metal-hdrboost/releases/latest/download/hdrboost
+sudo chmod +x "$BIN_DIR/hdrboost"
+
+echo "✅ Installed.  Run:  hdrboost &"
