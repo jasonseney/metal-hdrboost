@@ -4,6 +4,8 @@
 
 `hdrboost` is a tiny Metal overlay that unlocks true XDR nits on any Apple‑silicon display – install with one curl, toggle with a hot‑key. A single‑file Swift binary - no GUI that flips on your Mac’s hidden “sun mode” and blasts HDR to full 1,000 nit glory.
 
+![logo](https://i.postimg.cc/cJ4rfZZn/hdrboost-image.png)
+
 ### 🖥  Quick install
 
 ```zsh
